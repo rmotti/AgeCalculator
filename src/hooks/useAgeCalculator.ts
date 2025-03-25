@@ -1,4 +1,4 @@
-// src/hooks/useAgeCalculator.ts
+
 import { useState } from 'react';
 
 interface AgeResult {
