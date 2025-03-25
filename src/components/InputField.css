@@ -1,0 +1,57 @@
+/* src/components/InputField.css */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .input-field label {
+    color: #716f6f;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  
+  .input-field input {
+    width: 160px;
+    padding: 12px 24px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #141414;
+  }
+  
+  .input-field input:focus {
+    outline: none;
+    border-color: #854dff;
+  }
+  
+  .input-field input::placeholder {
+    color: #dbdbdb;
+  }
+  
+  .error-message {
+    color: #ff5757;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 8px;
+    font-weight: 400;
+  }
+  
+  .error input {
+    border-color: #ff5757;
+  }
+  
+  .error label {
+    color: #ff5757;
+  }
+  
+  @media (max-width: 768px) {
+    .input-field input {
+      width: 100%;
+      font-size: 20px;
+      padding: 12px 16px;
+    }
+  }

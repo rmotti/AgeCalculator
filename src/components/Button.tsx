@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
     <button className="button" onClick={onClick}>
-      Calculate
+      <img src="./assets/images/icon-arrow.svg" alt="Arrow Icon" />
     </button>
   );
 };

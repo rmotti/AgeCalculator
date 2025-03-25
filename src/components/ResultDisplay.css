@@ -1,0 +1,26 @@
+/* src/components/ResultDisplay.css */
+.result-display {
+    padding-top: 48px;
+  }
+  
+  .result-item {
+    font-size: 104px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1.1;
+    color: #141414;
+  }
+  
+  .result-item span {
+    color: #854dff;
+  }
+  
+  @media (max-width: 768px) {
+    .result-display {
+      padding-top: 32px;
+    }
+    
+    .result-item {
+      font-size: 56px;
+    }
+  }

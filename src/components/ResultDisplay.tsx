@@ -10,9 +10,15 @@ interface ResultDisplayProps {
 const ResultDisplay: React.FC<ResultDisplayProps> = ({ years, months, days }) => {
   return (
     <div className="result-display">
-      <div>{years} years</div>
-      <div>{months} months</div>
-      <div>{days} days</div>
+      <div className="result-item">
+        <span>{years}</span> {years === 1 ? 'year' : 'years'}
+      </div>
+      <div className="result-item">
+        <span>{months}</span> {months === 1 ? 'month' : 'months'}
+      </div>
+      <div className="result-item">
+        <span>{days}</span> {days === 1 ? 'day' : 'days'}
+      </div>
     </div>
   );
 };
