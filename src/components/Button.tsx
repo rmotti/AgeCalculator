@@ -1,5 +1,6 @@
 import React from 'react';
 import './Button.css';
+import arrowIcon from '../assets/images/icon-arrow.svg';
 
 interface ButtonProps {
   onClick: () => void;
@@ -8,7 +9,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ onClick }) => {
   return (
     <button className="button" onClick={onClick}>
-      <img src="./assets/images/icon-arrow.svg" alt="Arrow Icon" />
+      <img src={arrowIcon} alt="Arrow Icon" />
     </button>
   );
 };
