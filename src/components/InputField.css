@@ -1,4 +1,4 @@
-/* src/components/InputField.css */
+
 .input-field {
     display: flex;
     flex-direction: column;
@@ -7,6 +7,7 @@
   
   .input-field label {
     color: #716f6f;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 0.25em;
@@ -18,6 +19,7 @@
     padding: 12px 15px;
     border: 1px solid #dbdbdb;
     border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
     font-size: 25px;
     font-weight: 700;
     color: #141414;
