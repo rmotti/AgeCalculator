@@ -46,7 +46,11 @@ const AgeCalculator: React.FC = () => {
           <Button onClick={calculateAge} />
         </div>
       </div>
-      <ResultDisplay years={result.years} months={result.months} days={result.days} />
+      <ResultDisplay 
+        years={result?.years ?? null} 
+        months={result?.months ?? null} 
+        days={result?.days ?? null} 
+      />
     </div>
   );
 };

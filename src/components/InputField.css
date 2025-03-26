@@ -14,11 +14,11 @@
   }
   
   .input-field input {
-    width: 160px;
-    padding: 12px 24px;
+    width: 120px;
+    padding: 12px 15px;
     border: 1px solid #dbdbdb;
     border-radius: 8px;
-    font-size: 32px;
+    font-size: 25px;
     font-weight: 700;
     color: #141414;
   }
