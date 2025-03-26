@@ -15,12 +15,11 @@
     color: #854dff;
   }
   
-  @media (max-width: 768px) {
+
+
+  @media (max-width: 430px) {
     .result-display {
       padding-top: 32px;
     }
-    
-    .result-item {
-      font-size: 56px;
-    }
   }
+

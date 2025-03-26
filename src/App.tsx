@@ -1,6 +1,6 @@
 import AgeCalculator from './components/AgeCalculator';
 import './App.css';
-import './index.css';
+
 
 function App() {
   return (
