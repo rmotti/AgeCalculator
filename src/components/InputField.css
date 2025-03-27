@@ -75,29 +75,29 @@
 
   @media (max-width: 530px) {
     .input-field input {
-      width: 70px; /* Reduzido */
-      font-size: 14px; /* Aumentado para melhor legibilidade */
-      padding: 2px; /* Ajustado */
+      width: 70px; 
+      font-size: 14px; 
+      padding: 2px; 
     }
     
     .input-field label {
-      font-size: 11px; /* Reduzido */
-      padding: 6px 0; /* Ajustado */
-      letter-spacing: 0.5px; /* Melhora legibilidade */
+      font-size: 11px; 
+      padding: 6px 0; 
+      letter-spacing: 0.5px; 
     }
     .error-message {
-      font-size: 12px; /* Reduzido */
+      font-size: 12px; 
     }
   }
 
   @media(max-height:700px){
     .error-message {
-      font-size: 18px; /* Reduzido */
+      font-size: 18px; 
     }
   }
 
   @media(max-height:430px){
     .error-message {
-      font-size: 12px; /* Reduzido */
+      font-size: 12px; 
     }
   }

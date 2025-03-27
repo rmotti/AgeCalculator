@@ -12,14 +12,14 @@
     display: flex;
     gap: 32px;
     padding-bottom: 48px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0; /* Divisor entre os campos de entrada e o botão */
     margin-bottom: 48px;
     position: relative;
   }
   
 
   .button-container {
-    position: absolute;
+    position: absolute; /* Para posicionar o botão por cima do divisor*/
     right: 0;
     bottom: -48px;
   }

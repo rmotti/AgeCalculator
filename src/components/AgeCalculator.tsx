@@ -1,10 +1,12 @@
 import React from 'react';
-import Button from './button';
+import Button from './Button';
 import InputField from './InputField';
 import ResultDisplay from './ResultDisplay';
 import useAgeCalculator from '../hooks/useAgeCalculator';
 import './AgeCalculator.css';
 
+// uso do hook useAgeCalculator para calcular a idade
+// O hook é responsável por gerenciar o estado dos inputs, validar os dados e calcular a idade
 const AgeCalculator: React.FC = () => {
   const {
     day,
@@ -18,6 +20,7 @@ const AgeCalculator: React.FC = () => {
     calculateAge,
   } = useAgeCalculator();
 
+//estrutura do input
   return (
     <div className="age-calculator">
       <div className="input-fields">
@@ -42,10 +45,12 @@ const AgeCalculator: React.FC = () => {
           error={errors.year}
           maxLength={4}
         />
+        
         <div className="button-container">
           <Button onClick={calculateAge} />
         </div>
       </div>
+      
       <ResultDisplay 
         years={result?.years ?? null} 
         months={result?.months ?? null} 

@@ -1,17 +1,19 @@
 import { useState } from 'react';
 
+//Interface do resultado
 interface AgeResult {
   years: number;
   months: number;
   days: number;
 }
-
+//Interface dos erros de input
 interface InputErrors {
   day: string;
   month: string;
   year: string;
 }
-
+// Hook para calcular a idade
+// O hook é responsável por gerenciar o estado dos inputs, validar os dados e calcular a idade
 const useAgeCalculator = () => {
   const [day, setDay] = useState('');
   const [month, setMonth] = useState('');
@@ -19,7 +21,8 @@ const useAgeCalculator = () => {
   const [errors, setErrors] = useState<InputErrors>({ day: '', month: '', year: '' });
   const [result, setResult] = useState<AgeResult | null>(null); // Mudado para null inicial
 
-
+// Função para validar se a data é válida
+  // Verifica se a data é válida considerando o mês e o ano
   const isValidDate = (d: number, m: number, y: number): boolean => {
     // Ajuste para meses (0-11 no JavaScript)
     const date = new Date(y, m - 1, d);
@@ -29,12 +32,14 @@ const useAgeCalculator = () => {
       date.getDate() === d
     );
   };
-
+// Função para validar os inputs
+  // Valida os inputs e retorna um booleano indicando se os dados são válidos
   const validateInputs = (): boolean => {
     const newErrors: InputErrors = { day: '', month: '', year: '' };
     let isValid = true;
 
     // Validação básica de preenchimento
+    // Verifica se os campos estão preenchidos e se são números válidos
     if (!day) {
       newErrors.day = 'This field is required';
       isValid = false;
@@ -64,22 +69,24 @@ const useAgeCalculator = () => {
       setErrors(newErrors);
       return false;
     }
-
+// Validação avançada
+    // Verifica se os valores são números válidos
     const dayNum = parseInt(day);
     const monthNum = parseInt(month);
     const yearNum = parseInt(year);
 
     // Validação avançada
+    //quando o dia é maior que 31 ou menor que 1
     if (dayNum < 1 || dayNum > 31) {
       newErrors.day = 'Must be a valid day';
       isValid = false;
     }
-
+// Valida se o mês é válido (1-12)
     if (monthNum < 1 || monthNum > 12) {
       newErrors.month = 'Must be a valid month';
       isValid = false;
     }
-
+// Valida se o ano é válido (não pode ser maior que o ano atual)
     const currentYear = new Date().getFullYear();
     if (yearNum > currentYear) {
       newErrors.year = 'Must be in the past';
@@ -109,7 +116,8 @@ const useAgeCalculator = () => {
     setErrors(newErrors);
     return isValid;
   };
-
+// Função para calcular a idade
+  // Calcula a idade com base na data de nascimento e atualiza o estado do resultado
   const calculateAge = () => {
     if (!validateInputs()) return;
 
@@ -139,7 +147,8 @@ const useAgeCalculator = () => {
 
     setResult({ years, months, days });
   };
-
+// Função para limpar os inputs
+  // Limpa os inputs e o resultado
   return {
     day,
     month,
@@ -152,5 +161,6 @@ const useAgeCalculator = () => {
     calculateAge,
   };
 };
-
+// Hook para calcular a idade
+// O hook é responsável por gerenciar o estado dos inputs, validar os dados e calcular a idade
 export default useAgeCalculator;
